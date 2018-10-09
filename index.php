@@ -57,7 +57,7 @@ class Command
     public function run(Point $point)
     {
         if (self::COMMANT_START === $this->command) {
-            $point->angle += $this->value;
+            $point->angle = $this->value;
             
         }elseif (self::COMMAND_WALK === $this->command) {
             $point->latitude += $this->value * cos(deg2rad($point->angle));
